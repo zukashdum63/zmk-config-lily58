@@ -59,11 +59,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3        &kp N4        &kp N5                           &kp N6        &hrm AMPERSAND N7  &kp N8              &kp N9   &kp N0    &kp EQUAL
-&kp TAB    &kp Q   &kp W   &hrm GRAVE E  &kp R         &kp T                            &kp Y         &kp U              &kp I               &kp O    &kp P     &kp MINUS
-&kp LSHFT  &kp A   &kp S   &kp D         &kp F         &kp G                            &kp H         &kp J              &kp K               &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z   &kp X   &hrm LC(C) C  &hrm LC(V) V  &kp B     &kp LBKT     &kp RBKT  &kp N         &kp M              &kp COMMA           &kp DOT  &kp FSLH  &kp BACKSLASH
-                           &mo 3         &kp LGUI      &kp LALT  &kp SPACE    &kp RET   &lt 2 DELETE  &kp BACKSPACE      &kp K_CONTEXT_MENU
+&kp ESC    &kp N1  &kp N2  &kp N3        &kp N4        &kp N5                           &kp N6         &hrm AMPERSAND N7  &kp N8              &kp N9   &kp N0    &kp EQUAL
+&kp TAB    &kp Q   &kp W   &hrm GRAVE E  &kp R         &kp T                            &kp Y          &kp U              &kp I               &kp O    &kp P     &kp MINUS
+&kp LSHFT  &kp A   &kp S   &kp D         &kp F         &kp G                            &kp H          &kp J              &kp K               &kp L    &kp SEMI  &kp SQT
+&kp LCTRL  &kp Z   &kp X   &hrm LC(C) C  &hrm LC(V) V  &kp B     &kp LBKT     &kp RBKT  &kp N          &kp M              &kp COMMA           &kp DOT  &kp FSLH  &kp BACKSLASH
+                           &mo 3         &kp LGUI      &kp LALT  &kp SPACE    &kp RET   &kp BACKSPACE  &kp DELETE         &kp K_CONTEXT_MENU
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -109,21 +109,11 @@
 
         layer_3 {
             bindings = <
-&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                      &kp F6  &kp F7      &kp F8        &kp F9          &kp F10          &kp PAGE_UP
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                      &kp N6  &kp N7      &kp N8        &kp N9          &kp N0           &kp PAGE_DOWN
-&trans  &trans  &trans  &trans  &trans  &trans                      &trans  &kp LEFT    &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp HOME
-&trans  &trans  &trans  &trans  &trans  &trans  &kp F11    &kp F12  &trans  &kp INSERT  &trans        &trans          &trans           &kp END
-                        &trans  &trans  &trans  &trans     &trans   &trans  &trans      &trans
-            >;
-        };
-
-        layer_4 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                      &kp F6  &kp F7             &kp F8        &kp F9          &kp F10          &kp PAGE_UP
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                      &kp N6  &hrm AMPERSAND N7  &kp N8        &kp N9          &kp N0           &kp PAGE_DOWN
+&trans  &trans  &trans  &trans  &trans  &trans                      &trans  &kp LEFT           &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp HOME
+&trans  &trans  &trans  &trans  &trans  &trans  &kp F11    &kp F12  &trans  &kp INSERT         &trans        &trans          &trans           &kp END
+                        &trans  &trans  &trans  &trans     &trans   &trans  &trans             &trans
             >;
         };
     };
