@@ -13,15 +13,14 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp ESC>;
-        };
-
         LeftPar {
             bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <16 17>;
+            key-positions = <28 29>;
+        };
+
+        RightPar {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <30 31>;
         };
     };
 
@@ -54,6 +53,15 @@
         };
     };
 
+    macros {
+        SbDevMacroPass: SbDevMacroPass {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(S) &kp B &kp LS(D) &kp E &kp V &kp LS(P) &kp O &kp O &kp M &kp S &kp I &kp M &kp E &kp T &kp I &kp N5 &kp EXCL>;
+            label = "SBDEVMACROPASS";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -66,11 +74,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                              &kp N6        &kp N7    &kp N8     &kp N9   &kp N0    &kp EQUAL
-&kp TAB    &kp Q   &kp W   &kp E     &kp R     &kp T                               &kp Y         &kp U     &kp I      &kp O    &kp P     &kp MINUS
-&kp LCTRL  &kp A   &kp S   &kp D     &kp F     &kp G                               &kp H         &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z   &kp X   &kp C     &kp V     &kp B        &kp LBKT     &kp RBKT  &kp N         &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
-                           &kp LALT  &kp LGUI  &lt 1 GRAVE  &kp SPACE    &kp RET   &lt 2 DELETE  &kp BSPC  &kp RGUI
+&kp ESC         &kp N1  &kp N2  &kp N3        &kp N4        &kp N5                              &kp N6        &kp N7    &kp N8     &kp N9   &kp N0    &kp EQUAL
+&kp TAB         &kp Q   &kp W   &hrm GRAVE E  &kp R         &kp T                               &kp Y         &kp U     &kp I      &kp O    &kp P     &kp MINUS
+&kp LEFT_SHIFT  &kp A   &kp S   &kp D         &kp F         &kp G                               &kp H         &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LCTRL       &kp Z   &kp X   &kp C         &kp V         &kp B        &kp LBKT     &kp RBKT  &kp N         &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
+                                &kp LEFT_GUI  &kp LEFT_ALT  &lt 1 GRAVE  &kp SPACE    &kp RET   &lt 2 DELETE  &kp BSPC  &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
