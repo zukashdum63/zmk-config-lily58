@@ -18,6 +18,11 @@
             key-positions = <0 1>;
             bindings = <&kp ESC>;
         };
+
+        LeftPar {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <16 17>;
+        };
     };
 
     behaviors {
