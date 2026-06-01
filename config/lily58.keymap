@@ -50,6 +50,11 @@
             bindings = <&kp CAPSLOCK>;
             key-positions = <24 35>;
         };
+
+        ToMain {
+            bindings = <&to 0>;
+            key-positions = <0 11>;
+        };
     };
 
     behaviors {
