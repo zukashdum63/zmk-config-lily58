@@ -150,10 +150,10 @@
 
         F_layer {
             bindings = <
-&trans  &none   &none   &none     &none     &none                      &none   &none   &none            &none              &none          &none
-&trans  &none   &none   &none     &none     &none                      &none   &none   &none            &kp RS(RIGHT_ALT)  &none          &none
-&kp F1  &kp F2  &kp F3  &kp F4    &kp F5    &kp F6                     &trans  &trans  &kp RIGHT_SHIFT  &kp RIGHT_CONTROL  &kp RIGHT_ALT  &none
-&kp F7  &kp F8  &kp F9  &kp F10   &kp F11   &kp F12  &none     &none   &none   &none   &none            &none              &none          &none
+&trans  &none   &none   &none     &none     &none                      &none   &none   &none           &none             &none         &none
+&trans  &none   &none   &none     &none     &none                      &none   &none   &none           &kp LS(LEFT_ALT)  &none         &none
+&kp F1  &kp F2  &kp F3  &kp F4    &kp F5    &kp F6                     &trans  &trans  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &none
+&kp F7  &kp F8  &kp F9  &kp F10   &kp F11   &kp F12  &none     &none   &none   &none   &none           &none             &none         &none
                         &kp LGUI  &kp LALT  &to 0    &trans    &trans  &to 1   &trans  &none
             >;
         };
