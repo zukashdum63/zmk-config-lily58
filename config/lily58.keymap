@@ -55,6 +55,31 @@
             bindings = <&to 0>;
             key-positions = <0 11>;
         };
+
+        Underscore {
+            bindings = <&Underscore>;
+            key-positions = <45 46>;
+        };
+
+        Minus {
+            bindings = <&kp KP_MINUS>;
+            key-positions = <19 20>;
+        };
+
+        Plus {
+            bindings = <&kp KP_PLUS>;
+            key-positions = <15 16>;
+        };
+
+        Multiply {
+            bindings = <&kp KP_MULTIPLY>;
+            key-positions = <28 27>;
+        };
+
+        Divide {
+            bindings = <&kp KP_SLASH>;
+            key-positions = <31 32>;
+        };
     };
 
     behaviors {
@@ -114,6 +139,13 @@
             bindings = <&kt LEFT_ALT &kp KP_NUMBER_3 &kp KP_NUMBER_5 &toggle_off LEFT_ALT>;
             label = "NEW_MACRO";
         };
+
+        Underscore: Underscore {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LEFT_ALT &kp KP_NUMBER_9 &kp KP_NUMBER_5 &toggle_off LEFT_ALT>;
+            label = "UNDERSCORE";
+        };
     };
 
     keymap {
@@ -129,7 +161,7 @@
 
             bindings = <
 &kp ESC         &kp N1        &kp N2        &kp N3        &kp N4        &kp N5                        &kp N6  &kp N7  &kp N8              &kp N9   &kp N0    &kp EQUAL
-&kp TAB         &kp Q         &kp W         &hrm GRAVE E  &kp R         &kp T                         &kp Y   &kp U   &kp I               &kp O    &kp P     &kp MINUS
+&kp TAB         &kp Q         &kp W         &hrm GRAVE E  &kp R         &kp T                         &kp Y   &kp U   &kp I               &kp O    &kp P     &kp BACKSPACE
 &kp LEFT_SHIFT  &kp A         &kp S         &kp D         &kp F         &kp G                         &kp H   &kp J   &kp K               &kp L    &kp SEMI  &kp SQT
 &kp LCTRL       &hrm LC(Z) Z  &hrm LC(X) X  &hrm LC(C) C  &hrm LC(V) V  &kp B   &none        &none    &kp N   &kp M   &kp COMMA           &kp DOT  &kp FSLH  &lt 2 BACKSLASH
                                             &kp LEFT_GUI  &kp LEFT_ALT  &to 1   &kp SPACE    &kp RET  &none   &to 3   &kp K_CONTEXT_MENU
