@@ -86,6 +86,11 @@
             bindings = <&kp EQUAL>;
             key-positions = <29 30>;
         };
+
+        MacroPass {
+            bindings = <&SbDevMacroPass>;
+            key-positions = <10 11>;
+        };
     };
 
     behaviors {
