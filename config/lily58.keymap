@@ -152,6 +152,20 @@
             bindings = <&kt LEFT_ALT &kp KP_NUMBER_9 &kp KP_NUMBER_5 &toggle_off LEFT_ALT>;
             label = "UNDERSCORE";
         };
+
+        Dot: Dot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LEFT_ALT &kp KP_NUMBER_4 &kp KP_NUMBER_6 &toggle_off LEFT_ALT>;
+            label = "DOT";
+        };
+
+        Colon: Colon {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LEFT_ALT &kp KP_NUMBER_5 &kp KP_NUMBER_8 &toggle_off LEFT_ALT>;
+            label = "COLON";
+        };
     };
 
     keymap {
@@ -179,7 +193,7 @@
         Navigation {
             bindings = <
 &trans  &none   &none   &none   &none   &none                    &none       &none           &none           &none      &none  &none
-&trans  &none   &none   &none   &none   &none                    &none       &kp HOME        &kp UP_ARROW    &kp END    &none  &trans
+&trans  &none   &none   &none   &none   &none                    &kp DELETE  &kp HOME        &kp UP_ARROW    &kp END    &none  &trans
 &trans  &none   &none   &none   &none   &none                    &kp INSERT  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &none  &kp RSHFT
 &trans  &trans  &trans  &trans  &trans  &none  &none     &none   &none       &none           &none           &none      &none  &kp RIGHT_CONTROL
                         &trans  &trans  &to 0  &trans    &trans  &trans      &trans          &trans
@@ -188,11 +202,11 @@
 
         Num {
             bindings = <
-&trans  &none  &none  &none            &none            &none                     &none      &none            &none            &none            &none       &none
-&trans  &none  &none  &kp KP_PLUS      &kp KP_SUBTRACT  &none                     &none      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none       &trans
-&trans  &none  &none  &kp KP_MULTIPLY  &kp KP_DIVIDE    &none                     &none      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none       &none
-&trans  &none  &none  &none            &none            &none   &none     &none   &kp KP_N0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT  &none
-                      &trans           &trans           &trans  &trans    &trans  &trans     &trans           &trans
+&trans  &none  &none  &none            &none            &none                    &none      &none            &none            &none            &none       &none
+&trans  &none  &none  &kp KP_PLUS      &kp KP_SUBTRACT  &none                    &Colon     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none       &trans
+&trans  &none  &none  &kp KP_MULTIPLY  &kp KP_DIVIDE    &none                    &Dot       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none       &none
+&trans  &none  &none  &none            &none            &none  &none     &none   &kp KP_N0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT  &none
+                      &trans           &trans           &to 0  &trans    &trans  &trans     &trans           &trans
             >;
         };
 
