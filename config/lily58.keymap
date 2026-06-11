@@ -237,11 +237,11 @@
 
         BtAndMedia {
             bindings = <
-&none  &none  &none  &none         &none         &none                   &none  &none            &none              &none       &none  &none
-&none  &none  &none  &bt BT_SEL 1  &bt BT_SEL 0  &none                   &none  &kp K_PREVIOUS   &kp K_PLAY_PAUSE   &kp K_NEXT  &none  &none
-&none  &none  &none  &none         &none         &none                   &none  &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &kp K_MUTE  &none  &none
-&none  &none  &none  &none         &none         &none   &none    &none  &none  &none            &none              &none       &none  &none
-                     &none         &none         &trans  &none    &none  &none  &none            &none
+&none  &none  &none  &none         &none         &none                  &none  &none            &none              &none       &none  &none
+&none  &none  &none  &bt BT_SEL 1  &bt BT_SEL 0  &none                  &none  &kp C_PREVIOUS   &kp C_PP           &kp C_NEXT  &none  &none
+&none  &none  &none  &none         &none         &none                  &none  &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &kp C_MUTE  &none  &none
+&none  &none  &none  &none         &none         &none  &none    &none  &none  &none            &none              &none       &none  &none
+                     &none         &none         &to 0  &none    &none  &none  &none            &none
             >;
         };
 
