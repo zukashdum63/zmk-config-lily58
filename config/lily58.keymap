@@ -91,6 +91,16 @@
             bindings = <&SbDevMacroPass>;
             key-positions = <10 11>;
         };
+
+        Ampersand {
+            bindings = <&Ampersand>;
+            key-positions = <20 21>;
+        };
+
+        Hash {
+            bindings = <&Hash>;
+            key-positions = <15 14>;
+        };
     };
 
     behaviors {
@@ -144,11 +154,11 @@
             label = "SHIFT_TEST";
         };
 
-        Hash: new_macro {
+        Hash: Hash {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kt LEFT_ALT &kp KP_NUMBER_3 &kp KP_NUMBER_5 &toggle_off LEFT_ALT>;
-            label = "NEW_MACRO";
+            label = "HASH";
         };
 
         Underscore: Underscore {
