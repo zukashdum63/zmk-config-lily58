@@ -143,7 +143,7 @@
         SbDevMacroPass: SbDevMacroPass {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(S) &kp B &kp LS(D) &kp E &kp V &kp LS(P) &kp O &kp O &kp M &kp S &kp I &kp M &kp E &kp T &kp I &kp N5 &kp EXCL>;
+            bindings = <&kp LS(S) &kp B &kp LS(D) &kp E &kp V &kp LS(P) &kp O &kp O &kp M &kp S &kp I &kp M &kp E &kp T &kp I &kp N1 &kp EXCL>;
             label = "SBDEVMACROPASS";
         };
 
